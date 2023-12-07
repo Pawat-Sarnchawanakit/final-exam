@@ -127,6 +127,34 @@ elif art_num == '5':
             .pos(random.randint(-300, 300), random.randint(-200, 200)) \
             .length(random.randint(50, 150)) \
             .draw(3);
-            
+elif art_num == '6':
+    for _ in range(20):
+        Polygon().color(Color.random()) \
+            .thickness(random.randint(1, 10)) \
+            .orientation(random.randint(0, 90)) \
+            .internal_angle(90) \
+            .pos(random.randint(-300, 300), random.randint(-200, 200)) \
+            .length(random.randint(50, 150)) \
+            .draw(3);
+elif art_num == '7':
+    for _ in range(20):
+        Polygon().color(Color.random()) \
+            .thickness(random.randint(1, 10)) \
+            .orientation(random.randint(0, 90)) \
+            .internal_angle(72) \
+            .pos(random.randint(-300, 300), random.randint(-200, 200)) \
+            .length(random.randint(50, 150)) \
+            .draw(3);
+elif art_num == '8':
+    for _ in range(20):
+        Polygon().color(Color.random()) \
+            .thickness(random.randint(1, 10)) \
+            .orientation(random.randint(0, 90)) \
+            .internal_angle(360//random.randint(3, 5)) \
+            .pos(random.randint(-300, 300), random.randint(-200, 200)) \
+            .length(random.randint(50, 150)) \
+            .draw(3);
+else:
+    print("Invalid choice.")
 turtle.done()
 
