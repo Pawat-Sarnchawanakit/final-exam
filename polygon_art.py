@@ -116,7 +116,7 @@ art_num = input(
     "Which art do you want to generate? Enter a number between 1 to 8, inclusive: "
 )
 if art_num == '1':
-    for _ in range(25):
+    for _ in range(30):
         Polygon().random_color() \
             .thickness(random.randint(1, 10)) \
             .orientation(random.randint(0, 90)) \
@@ -125,7 +125,7 @@ if art_num == '1':
             .pos(random.randint(-300, 300), random.randint(-200, 200)) \
             .draw()
 elif art_num == '2':
-    for _ in range(25):
+    for _ in range(30):
         Polygon().random_color() \
             .thickness(random.randint(1, 10)) \
             .orientation(random.randint(0, 90)) \
@@ -134,7 +134,7 @@ elif art_num == '2':
             .pos(random.randint(-300, 300), random.randint(-200, 200)) \
             .draw()
 elif art_num == '3':
-    for _ in range(25):
+    for _ in range(30):
         Polygon().random_color() \
             .thickness(random.randint(1, 10)) \
             .orientation(random.randint(0, 90)) \
@@ -143,7 +143,7 @@ elif art_num == '3':
             .pos(random.randint(-300, 300), random.randint(-200, 200)) \
             .draw()
 elif art_num == '4':
-    for _ in range(25):
+    for _ in range(30):
         Polygon().random_color() \
             .thickness(random.randint(1, 10)) \
             .orientation(random.randint(0, 90)) \
@@ -152,7 +152,7 @@ elif art_num == '4':
             .pos(random.randint(-300, 300), random.randint(-200, 200)) \
             .draw()
 elif art_num == '5':
-    for _ in range(20):
+    for _ in range(30):
         Polygon().random_color() \
             .thickness(random.randint(1, 10)) \
             .orientation(random.randint(0, 90)) \
@@ -161,7 +161,7 @@ elif art_num == '5':
             .length(random.randint(50, 150)) \
             .draw(3)
 elif art_num == '6':
-    for _ in range(20):
+    for _ in range(30):
         Polygon().random_color() \
             .thickness(random.randint(1, 10)) \
             .orientation(random.randint(0, 90)) \
@@ -170,7 +170,7 @@ elif art_num == '6':
             .length(random.randint(50, 150)) \
             .draw(3)
 elif art_num == '7':
-    for _ in range(20):
+    for _ in range(30):
         Polygon().random_color() \
             .thickness(random.randint(1, 10)) \
             .orientation(random.randint(0, 90)) \
@@ -179,7 +179,7 @@ elif art_num == '7':
             .length(random.randint(50, 150)) \
             .draw(3)
 elif art_num == '8':
-    for _ in range(20):
+    for _ in range(30):
         Polygon().random_color() \
             .thickness(random.randint(1, 10)) \
             .orientation(random.randint(0, 90)) \
