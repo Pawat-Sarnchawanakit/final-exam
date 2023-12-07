@@ -21,17 +21,31 @@ class Polygon:
     def length(self, length):
         self.__length = length;
         return self;
-    def draw(self, x, y):
-        turtle.penup();
-        turtle.goto(x, y)
-        turtle.setheading(self.__start_angle)
-        turtle.color(self.__col)
-        turtle.pensize(self.__thickness)
-        turtle.pendown()
-        for _ in range(360//self.__angle):
-            turtle.forward(self.__length)
-            turtle.left(self.__angle)
-        turtle.penup()
+    def pos(self, x, y):
+        self.__pos = (x, y);
+        return self;
+    def draw(self, count=1, reduction_ratio=0.618):
+        for i in range(count):
+            turtle.penup();
+            turtle.goto(*self.__pos)
+            turtle.setheading(self.__start_angle)
+            turtle.color(self.__col)
+            turtle.pensize(self.__thickness)
+            turtle.pendown()
+            for _ in range(360//self.__angle):
+                turtle.forward(self.__length)
+                turtle.left(self.__angle)
+            turtle.penup()
+            if i + 1 == count:
+                break;
+            turtle.penup()
+            turtle.forward(self.__length*(1-reduction_ratio)/2)
+            turtle.left(90)
+            turtle.forward(self.__length*(1-reduction_ratio)/2)
+            turtle.right(90)
+            self.__length = 0.618*self.__length;
+            self.__pos = (turtle.pos()[0], turtle.pos()[1])
+
 
 turtle.speed(0)
 turtle.bgcolor('black')
@@ -75,7 +89,8 @@ if art_num == '1':
             .orientation(random.randint(0, 90)) \
             .internal_angle(120) \
             .length(random.randint(50, 150)) \
-            .draw(random.randint(-300, 300), random.randint(-200, 200));
+            .pos(random.randint(-300, 300), random.randint(-200, 200)) \
+            .draw()
 elif art_num == '2':
     for _ in range(25):
         Polygon().color(Color.random()) \
@@ -83,7 +98,8 @@ elif art_num == '2':
             .orientation(random.randint(0, 90)) \
             .internal_angle(90) \
             .length(random.randint(50, 150)) \
-            .draw(random.randint(-300, 300), random.randint(-200, 200));
+            .pos(random.randint(-300, 300), random.randint(-200, 200)) \
+            .draw()
 elif art_num == '3':
     for _ in range(25):
         Polygon().color(Color.random()) \
@@ -91,7 +107,8 @@ elif art_num == '3':
             .orientation(random.randint(0, 90)) \
             .internal_angle(72) \
             .length(random.randint(50, 150)) \
-            .draw(random.randint(-300, 300), random.randint(-200, 200));
+            .pos(random.randint(-300, 300), random.randint(-200, 200)) \
+            .draw()
 elif art_num == '4':
     for _ in range(25):
         Polygon().color(Color.random()) \
@@ -99,18 +116,17 @@ elif art_num == '4':
             .orientation(random.randint(0, 90)) \
             .internal_angle(360//random.randint(3, 5)) \
             .length(random.randint(50, 150)) \
-            .draw(random.randint(-300, 300), random.randint(-200, 200));
+            .pos(random.randint(-300, 300), random.randint(-200, 200)) \
+            .draw()
 elif art_num == '5':
     for _ in range(20):
-        polygon = Polygon().color(Color.random()) \
-                .thickness(random.randint(1, 10)) \
-                .orientation(random.randint(0, 90)) \
-                .internal_angle(360//random.randint(3, 5));
-        x, y = random.randint(-300, 300), random.randint(-200, 200)
-        length = random.randint(50, 150);
-        for _ in range(3):
-                polygon.length(length) \
-                    .draw(x, y);
-                length *= 0.618;
+        Polygon().color(Color.random()) \
+            .thickness(random.randint(1, 10)) \
+            .orientation(random.randint(0, 90)) \
+            .internal_angle(120) \
+            .pos(random.randint(-300, 300), random.randint(-200, 200)) \
+            .length(random.randint(50, 150)) \
+            .draw(3);
+            
 turtle.done()
 
