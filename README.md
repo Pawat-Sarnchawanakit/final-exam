@@ -3,3 +3,18 @@
 - Fork, then, clone this repo
 - Read the instructions given in the course's Google Classroom and start coding
 - Once you are done, push your final code to your Github repo and modify this README to report on the work you have done
+# Usage
+run using python interpreter:
+```sh
+$ python polygon_art.py
+```
+You will be given a choice, 1-8 (inclusive), just type in your choice and press enter.  
+The art will be displayed in the turtle screen.  
+Here is an example choice 1:  
+```sh
+$ python polygon_art.py
+Which art do you want to generate? Enter a number between 1 to 8, inclusive: 1
+```
+
+There are no bugs found at the moment if you found any bugs, please open an issue.  
+The examples of the arts are given in the repo as `art1.jpg` and so on.
