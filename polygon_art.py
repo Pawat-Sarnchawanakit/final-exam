@@ -69,7 +69,7 @@ turtle.colormode(255)
 
 art_num = input("Which art do you want to generate? Enter a number between 1 to 8, inclusive: ")
 if art_num == '1':
-    for _ in range(30):
+    for _ in range(25):
         Polygon().color(Color.random()) \
             .thickness(random.randint(1, 10)) \
             .orientation(random.randint(0, 90)) \
@@ -77,12 +77,40 @@ if art_num == '1':
             .length(random.randint(50, 150)) \
             .draw(random.randint(-300, 300), random.randint(-200, 200));
 elif art_num == '2':
-    for _ in range(30):
+    for _ in range(25):
         Polygon().color(Color.random()) \
             .thickness(random.randint(1, 10)) \
             .orientation(random.randint(0, 90)) \
             .internal_angle(90) \
             .length(random.randint(50, 150)) \
             .draw(random.randint(-300, 300), random.randint(-200, 200));
+elif art_num == '3':
+    for _ in range(25):
+        Polygon().color(Color.random()) \
+            .thickness(random.randint(1, 10)) \
+            .orientation(random.randint(0, 90)) \
+            .internal_angle(72) \
+            .length(random.randint(50, 150)) \
+            .draw(random.randint(-300, 300), random.randint(-200, 200));
+elif art_num == '4':
+    for _ in range(25):
+        Polygon().color(Color.random()) \
+            .thickness(random.randint(1, 10)) \
+            .orientation(random.randint(0, 90)) \
+            .internal_angle(360//random.randint(3, 5)) \
+            .length(random.randint(50, 150)) \
+            .draw(random.randint(-300, 300), random.randint(-200, 200));
+elif art_num == '5':
+    for _ in range(20):
+        polygon = Polygon().color(Color.random()) \
+                .thickness(random.randint(1, 10)) \
+                .orientation(random.randint(0, 90)) \
+                .internal_angle(360//random.randint(3, 5));
+        x, y = random.randint(-300, 300), random.randint(-200, 200)
+        length = random.randint(50, 150);
+        for _ in range(3):
+                polygon.length(length) \
+                    .draw(x, y);
+                length *= 0.618;
 turtle.done()
 
